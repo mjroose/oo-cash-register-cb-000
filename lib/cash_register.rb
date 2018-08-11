@@ -31,5 +31,5 @@ class CashRegister
       item.name
     end
   end
-  
+
 end
