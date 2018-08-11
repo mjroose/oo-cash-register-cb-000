@@ -18,8 +18,12 @@ class CashRegister
   end
 
   def apply_discount
-    @total *= 1.0 - Float(@discount) / 100.0
-    "After the discount, the total comes to $#{Integer(@total)}."
+    if @discount != 0
+      @total *= 1.0 - Float(@discount) / 100.0
+      "After the discount, the total comes to $#{Integer(@total)}."
+    else
+      "There is no discount to apply."
+    end
   end
 
 end
