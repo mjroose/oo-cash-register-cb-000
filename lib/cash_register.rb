@@ -19,7 +19,7 @@ class CashRegister
 
   def apply_discount
     @total *= 1.0 - Float(@discount) / 100.0
-    "After the discount, the total comes to $#{@total}."
+    "After the discount, the total comes to $#{Integer(@total)}."
   end
 
 end
