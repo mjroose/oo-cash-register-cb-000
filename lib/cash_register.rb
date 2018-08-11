@@ -26,4 +26,10 @@ class CashRegister
     end
   end
 
+  def items
+    @items.collect do |item|
+      item.name
+    end
+  end
+  
 end
