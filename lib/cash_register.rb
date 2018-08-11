@@ -13,8 +13,10 @@ class CashRegister
   end
 
   def add_item(title, price, quantity = 1)
-    @items << {:title => title, :price => price, :quantity => quantity}
-    @total += price * quantity
+    quantity.times do
+      @items << {:title => title, :price => price, :quantity => quantity}
+      @total += price * quantity
+    end
   end
 
   def apply_discount
