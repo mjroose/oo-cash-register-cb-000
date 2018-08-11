@@ -3,7 +3,6 @@ class CashRegister
   attr_accessor :total, :discount
 
   def total
-    self.apply_discount
     @total
   end
 
@@ -19,8 +18,8 @@ class CashRegister
   end
 
   def apply_discount
-    @total = @total * Float(1 - @discount / 100)
-    puts "After the discount, the total comes to $#{@total}." 
+    @total *= 1.0 - Float(@discount) / 100.0
+    puts "After the discount, the total comes to $#{@total}."
   end
 
 end
