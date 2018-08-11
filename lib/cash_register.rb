@@ -28,7 +28,7 @@ class CashRegister
 
   def items
     @items.collect do |item|
-      item.name
+      item.title
     end
   end
 
